@@ -1,21 +1,26 @@
 <html>
     <head>
         <header>
-            <nav>
-                <a href="https://selfservicesicli.orange-sonatel.com/index.php">Accueil</a>
+            <meta charset ="UTF-8>"
+            <meta http-equiv="X-UA-Compatible" content="IE#edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <link rel="stylesheet" href="./styleChtml.css"/>
+             <style="font-family:roboto"></style>
+            <nav class="navbar" style="color:blue; background-color:yellow; display: block;">
+                <a id="Accueil" href="https://selfservicesicli.orange-sonatel.com/index.php">Accueil</a>
 
-                <a href="https://andebaqatar.orange.sn/article/avec-votre-statut-orange-gold-accedez-a-des-avantages-exclusifs">A propos</a>
+                <a id="Apropos" href="https://andebaqatar.orange.sn/article/avec-votre-statut-orange-gold-accedez-a-des-avantages-exclusifs">A propos</a>
 
-                <a href="https://www.macertif.com/af/certifications/gestion-de-projet/pmp/lp/testez-gratuitement-la-formation-pmp/?utm_source=Google&utm_medium=Banner&utm_campaign=PMP&utm_content=Discovery_AF&traffic_src=Google@Banner@PMP@Discovery_AF&gclid=CjwKCAiAy_CcBhBeEiwAcoMRHD0hbBwU3FMKOmcZBleDvrBraccaQeZvZvb19n6wdcrEqyG4RXyEhxoCpMcQAvD_BwE">Travail</a>
+                <a id="Travail" href="https://www.macertif.com/af/certifications/gestion-de-projet/pmp/lp/testez-gratuitement-la-formation-pmp/?utm_source=Google&utm_medium=Banner&utm_campaign=PMP&utm_content=Discovery_AF&traffic_src=Google@Banner@PMP@Discovery_AF&gclid=CjwKCAiAy_CcBhBeEiwAcoMRHD0hbBwU3FMKOmcZBleDvrBraccaQeZvZvb19n6wdcrEqyG4RXyEhxoCpMcQAvD_BwE">Travail</a>
 
-                <a href="https://account.samsung.com/membership/intro">CV</a>
+                <a id="CV" href="https://account.samsung.com/membership/intro">CV</a>
 
-                <a href="https://sonatel.engagement.dimelo.com/users/sign_in">Contact</a>
+                <a id="Contact"href="https://sonatel.engagement.dimelo.com/users/sign_in">Contact</a>
             </nav>
         <body>
             <!--La Section: A propos de vous-->
             <section>
-                <h1> A propos <h1>
+                <h1 style="font-size:xx-large; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color:red; background-color:aqua";> A propos <h1>
                     <p> 
                         <form>
 <label>Name:</label>
@@ -34,10 +39,32 @@
                     </p>
             </section>
         </br>
+
+<!--selecteur descendant (espace)-->
+<!--Le sélecteur descendant correspond à tous les éléments-->
+
+<section class="descendant-selector">
+    <h1>Descendant Selector (espace)</h1>
+
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <!-- not child but Descendant-->
+    <section>
+        <p>Paragraph 3 in the div. (inside a section el</p>
+    </section>  
+    </div>
+
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+</section>
+
+
+</br>
         <!--La Section: Travail-->
         <section>
-            <h2> Travail </h2>
-            <h3> Secteur d'activités</h3>
+            <h2 class="travail"> Travail </h2>
+            <h3 id="secteurdac"> Secteur d'activités</h3>
             <p> 
            <form>
             <select>
@@ -50,7 +77,32 @@
                 <option value="Santé">Santé</option>
             </select>
            </form>
-           <h4>Spécialisation</h4>
+           </p>
+           </section>
+
+           </br>
+<!--sélecteur enfant(>) (meme concept que les selecteurs descendants seulement qu'on prend ici les enfants directs)-->
+
+<!--Le selecteur d'enfant sélectionne tous les éléments. L'exemple suivant selectionne tous les éléments <p> et div enfants de la grande section-->
+    <section class="child-selector">
+        <h1>child selector (>) </h1>
+    
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <!-- not child but Descendant-->
+        <section>
+            <p>Paragraph 3 in the div. (inside a section el</p>
+        </section>  
+        </div>
+    
+        <p>Paragraph 4. Not in a div.</p>
+        <p>Paragraph 5. Not in a div.</p>
+    
+    </section>
+    
+           </br>
+           <h4 id="spe">Spécialisation</h4>
            <form>
             <select>
                 <option value="Support IT">Support IT</option>
@@ -67,15 +119,70 @@
             </p>
         </section>
     </br>
+
+<!--selecteur frère adjacent (+)-->
+<!--Le selecteur de frère adjacent est utilisé pour select autre element specifique.
+Les éléments frères doivent avoir le même éléments parent
+l'exemple suivant sélectionne le premier élément <p> suivant l'élement article-->
+
+    <section class="adjacent-sibling-selector">
+        <h1>adjacent Sibling Selector (+)</h1>
+        
+        <article>
+            <p>Paragraph 1 in the article.</p>
+            <p>Paragraph 2 in the article.</p>
+        </article>
+        
+        <p>Paragraph 3. After an article.</p>
+        <p>Paragraph 4. After an article.</p>
+        
+        <article>
+            <p>Paragraph 5. in the article.</p>
+            <p>Paragraph 6. in the article.</p>
+        </article>
+        
+        <p>Paragraph 7. After an article.</p>
+        <p>Paragraph 8. After an article.</p>
+            </section>
+        
+
+    </br>
     <!-- La Section: CV-->
     <section>
-        <h3> Curriculum Vitae ou CV </h3>
+        <h3 id="curvi"> Curriculum Vitae ou CV </h3>
         <p>
         </br>
         Le CV est un document qui précise le parcours (professionnel, scolaire, études supérieures...) 
         du candidat à une offre d'emploi, les indications concernant l'état civil d'un candidat à un poste,
         ses diplômes, son expérience professionnelle,... ou dossier comportant ces indications.
     </br>
+
+<!--Selecteur général de frère et soeurs (~)-->
+   
+   <!--Le selecteur de frère général sélectionne tous les éléments ................-->
+   
+   <!--<section class="General-sibling-selector"-->
+   
+    <section class="General-sibling-selector">
+        <h1>General Sibling Selector (~)</h1>
+       
+    <article>
+        <p>Paragraph 1 in the article.</p>
+        <p>Paragraph 2 in the article.</p>
+    </article>
+    
+    <p>Paragraph 3. After an article.</p>
+    <p>Paragraph 4. After an article.</p>
+    
+    <article>
+        <p>Paragraph 5. in the article.</p>
+        <p>Paragraph 6. in the article.</p>
+    </article>
+    
+    <p>Paragraph 7. After an article.</p>
+    <p>Paragraph 8. After an article.</p>
+    </section>
+
     </br>
 
     <button type="Télécharger">Télécharger</button>
@@ -105,9 +212,25 @@
         </body>
     </br>
     <footer>
+           <!--Internal link-->
         <h1>Auteur: Yacine Dièye SARR</h1>
         <h2>Contact: 00 221 77 508 37 29 / yacinedieyesarr@gmail.com</h2>
         <h3>Copyright Data: GoMyCode Student 2022-2023</h3>
+        <style>
+            h2{
+                color: blue;
+                text-align: center;
+            }
+            h3{
+                background-color:bisque;
+            }
+        </style>
+
+        <!--External Link & LES PSEUDOS-->
+        <h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-style: oblique;font-weight: 200;flex-wrap: wrap-reverse; color:blueviolet;background: yellowgreen;width:120px;">GOMYCODE LINK</h4>
+        <a href="https://learn.gomycode.co/tracks/f41c7028-8168-4360-bd6d-511e46647900/nodes/a3380275-dc94-4e28-bbc7-78e01bd10ae0">LINK OF GOMYCODE HOME</a>
     </footer>
+
+</body>
     </head>
     </html>

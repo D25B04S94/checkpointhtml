@@ -1,0 +1,103 @@
+
+/*DISPLAY TYPES*/
+
+#accueil{
+    display:inline;
+}
+#apropos{
+    display:inline;
+}
+#travail{
+    display:inline;
+}
+#cv{
+    display:inline;
+}
+#contact{
+    display:inline;
+}
+
+/*Font Style: roboto*/
+
+body{
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    /*CREATION DE CLASS*/
+    .travail{
+        color:aqua;
+        text-align: center;
+        background-color: black;
+        padding: 50px;
+        border: 2px solid red;
+       
+    }
+    #secteurdac{
+        color:aquamarine;
+        text-align: inherit;
+        margin: 70px;
+        border: 2px solid blue;
+    }
+
+
+    #spe{
+        color:rosybrown;
+        text-align: left;
+        background-color: brown;
+        width: 110px;
+        height: 30px;
+    }
+    #curvi{
+      
+        color:aqua;
+        text-align: center;
+        background-color: black;
+    }
+
+    /*THE TYPES OF SELECTORS*/
+
+    /*selecteur descendant (espace)*/
+
+.descendant-selector div p { 
+    background-color:yellow;
+}
+
+/*selecteur enfant (>)*/
+.child-selector > div > p {
+    background-color:red;
+}
+  /*selecteur frère adjacent (+) */
+/*pour voir ceci il faut enlever ce qui est en bas en bleu*/
+article + p{
+    background-color: green;
+}
+
+ /*selecteur général de frères et soeurs (~)*/
+
+ article ~ p {
+    background-color: blue;
+}
+
+
+    /*LES PSEUDOS*/
+
+    /*orange link*/
+    a:link{
+        color:blue;
+    }
+    /*visited link*/
+    a:visited{
+        color:red;
+    }
+
+    /*mouse over link*/
+    a:hover{
+        color:yellow;
+    }
+
+    /*selected link*/
+    a:active{
+        color:green;
+    }
+
+    /*AUTRES STYLES CSS VOIR DANS LE HTML*/
